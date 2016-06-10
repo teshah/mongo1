@@ -1,0 +1,10 @@
+db.createCollection('scenario');
+
+db.scenario.insert( { "siteName" : "Site1" , "scriptScenarioDesc" : "two" } );
+
+db.scenario.insert({ "siteName" : "Site1", "scriptScenarioDesc" : "two", "dateAdded": new Date()});
+
+
+db.scenario.update({'siteName':'Site1'},{$set:{'siteName':'New Site'}}, {multi:true})
+db.scenario.update({"siteName":"Site1"},{$set:{'siteName':'New Site'}})
+
